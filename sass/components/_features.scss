@@ -1,0 +1,36 @@
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.container {
+  .features-list {
+    display: flex;
+  }
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features-heading {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.features-paragraph {
+  color: var(--dark-text);
+  line-height: 1.71;
+  max-width: 270px;
+}
+.about-icon-wrap {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-color: var(--tone-color);
+  margin-bottom: 30px;
+}

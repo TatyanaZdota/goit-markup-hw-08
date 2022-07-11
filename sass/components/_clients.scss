@@ -1,0 +1,36 @@
+.clients {
+  padding: 94px 0;
+  .link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--soc-icon);
+    border-radius: 4px;
+    color: var(--soc-icon);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+    }
+  }
+}
+.clients-title {
+  font-size: 36px;
+  line-height: 1.67;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+}
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-icon {
+  fill: currentColor;
+}
