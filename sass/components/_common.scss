@@ -5,8 +5,18 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+
 .container {
-  width: 1200px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
+  @include mobile {
+    max-width: 448px;
+  }
+  @include tablet {
+    max-width: 720px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
 }

@@ -1,30 +1,46 @@
 .team {
   background-color: var(--tone-color);
+  padding-bottom: 60px;
 }
 .team-list {
   background-color: var(--tone-color);
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
-
+.team-item {
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+}
 .team-header {
-  padding: 94px 0 50px 0;
+  padding: 60px 0 30px 0;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+  @include desktop {
+    padding: 94px 0 50px 0;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .team-name {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   text-align: center;
   margin-bottom: 10px;
 }
 .team-paragraph {
   color: var(--dark-text);
   font-size: 16px;
-  line-height: 1.18;
+  line-height: 1.19;
   text-align: center;
   margin-bottom: 16px;
 }
@@ -34,14 +50,12 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   padding-top: 30px;
-  padding-bottom: 30px;
-}
-.team-item {
-  margin-bottom: 94px;
-  & + & {
-    margin-left: 30px;
+  padding-bottom: 24px;
+  @include desktop {
+    padding-bottom: 30px;
   }
 }
+
 .masters-soc-list {
   display: flex;
   justify-content: center;
