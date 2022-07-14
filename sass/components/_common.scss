@@ -11,10 +11,10 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   @include mobile {
-    max-width: 448px;
+    max-width: 480px;
   }
   @include tablet {
-    max-width: 720px;
+    max-width: 768px;
   }
   @include desktop {
     max-width: 1200px;

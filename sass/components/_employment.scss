@@ -1,5 +1,9 @@
 .employment {
   padding-bottom: 94px;
+  display: none;
+  @include desktop {
+    display: block;
+  }
 }
 .employment-title {
   font-weight: 700;

@@ -13,9 +13,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
+  width: 320px;
+  height: 609px;
+  @include mobile {
+    width: 450px;
+    height: 609px;
+  }
+  @include desktop {
+    width: 528px;
+    height: 581px;
+  }
   transform: translate(-50%, -50%) scale(1);
-  height: 581px;
   background-color: var(--background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -57,7 +65,10 @@
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
+  @include desktop {
+    line-height: 1.15;
+  }
   text-align: center;
   margin-bottom: 12px;
 }
@@ -126,7 +137,15 @@
 
 .check-text {
   font-weight: 400;
-  line-height: 1.71;
+  font-size: 7px;
+  line-height: 1.17;
+  @include mobile {
+    font-size: 12px;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   color: var(--dark-text);
   display: flex;
   align-items: center;
