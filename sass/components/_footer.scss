@@ -143,3 +143,24 @@
     margin-bottom: 0;
    }
 }
+@include desktop {.footer {
+  text-align: left;
+  & .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.logo-footer {font-size: 26px;}
+.address-container-wrapper {margin-right: auto;
+  margin-bottom: 0;
+  align-items: baseline;}
+  .address-container {margin-right: 70px; margin-bottom: 0;}
+  .footer-soc-container {margin-right: auto;
+    margin-bottom: 0;}
+    .mailing-form {display: flex;
+      }
+      .mailing-input {margin-right: 12px;
+      width: 358px;
+    margin-bottom: 0;}
+    .mailing-button {margin: 0;}
+}
