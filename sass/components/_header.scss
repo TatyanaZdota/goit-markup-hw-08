@@ -1,7 +1,7 @@
 .header {
   background-color: var(--background-color);
-  //align-items: center;
   border-bottom: 1px solid var(--border-header-color);
+  align-items: center;
   .container {
     display: flex;
     align-items: center;
@@ -13,23 +13,24 @@
 .nav__logo {
   display: block;
   padding: 16px 0 16px 0;
-  //padding-top: 24px;
-  //margin-right: 88px;
   color: var(--text-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
-  //font-size: 26px;
-  //line-height: 1.19;
   text-decoration: none;
+  @include tablet {margin-right: 88px;}
+  @include desktop {padding-top: 24px;
+  margin-right: 93px;
+  font-size: 26px;
+  line-height: 1.19;
+  }
 }
 .web {
   color: var(--accent-color);
 }
 .menu {
-  //display: flex;
-  display: none;
+ display: none;
   flex-wrap: wrap;
   gap: 50px;
   & .current::after {
@@ -43,11 +44,11 @@
     background-color: var(--accent-color);
     border-radius: 2px;
   }
+ @include tablet {display: flex;}
+ @include desktop {display: flex;}
 }
 
-.menu .menu__link.current {
-  color: var(--accent-color);
-}
+
 .menu__link {
   display: block;
   color: var(--text-color);
@@ -63,24 +64,27 @@
     color: var(--accent-color);
   }
 }
+
 .contact {
+  @include tablet {display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
   display: none;
+  margin-left: auto;
+  
   @include desktop {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 50px;
-    margin-left: 84px;
-    margin-left: auto;
+   }
   }
-}
 
 .contact__link {
-  @include desktop {
-    display: flex;
-  }
-
+font-size: 12px;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -91,22 +95,33 @@
   &:focus {
     color: var(--accent-color);
   }
+  @include desktop {display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  line-height: 1.14;}
 }
 
 .contact__mail {
   fill: currentColor;
-  margin-right: 10px;
-  width: 16px;
-  height: 12px;
+  margin-right: 8px;
+  width: 14px;
+  height: 10px;
+  @include desktop {margin-right: 10px;
+    width: 16px;
+    height: 12px;}
 }
 .contact__tel {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
   width: 10px;
-  height: 16px;
+  height: 14px;
+  @include desktop {margin-right: 10px;
+    height: 16px;}
 }
-.open-btn {
-  display: block;
+
+ .open-btn {
+display: block;
   margin-left: auto;
   width: 40px;
   height: 40px;
@@ -118,6 +133,8 @@
     &:hover,
     &:focus {
       fill: var(--accent-color);}
+      @include tablet {display: none;}
+      @include desktop {display: none;}
   }
 
     .mob-menu {position: fixed;
